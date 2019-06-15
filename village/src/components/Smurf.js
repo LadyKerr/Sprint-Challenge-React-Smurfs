@@ -16,12 +16,22 @@ const H3 = styled.h3 `
   font-size: 25px;
 `;
 
+const Tall = styled.strong `
+  font-size: 20px;
+  color: #01425f;
+`;
+
+const Age = styled.p `
+  font-size: 15px;
+  color: #01425f;
+`;
+
 const Smurf = props => {
   return (
     <SmurfDiv>
       <H3>{props.name}</H3>
-      <strong>{props.height} tall</strong>
-      <p>{props.age} smurf years old</p>
+      <Tall>{props.height} tall</Tall>
+      <Age>{props.age} smurf years old</Age>
     </SmurfDiv>
   );
 };
