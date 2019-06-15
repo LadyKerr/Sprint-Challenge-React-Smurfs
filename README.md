@@ -28,9 +28,24 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the differences between `client-side routing` and `server-side routing`.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
-- [ ] Mention three tools we can use to make AJAX requests.
+- [ X ] Explain the differences between `client-side routing` and `server-side routing`.
+
+  Client-side-routing: uses javascript to manage state and process server requests smoother and faster.
+In this instance, the page does not need to be refreshed which makes interacting with the 
+server faster and gives a smoother experience to the user. This is done through Components in react.
+
+Server-side-routing: requests made to the server requires a page refresh. The server then returns whatever information
+is needed to the browser by matching the url with whatever was coded to deliver the
+request to the user. This process can be really slow.
+
+
+- [ X ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+  Create:Post, Update:Put and Delete Requests can be mapped to the CRUD acronym.
+
+- [ X ] Mention three tools we can use to make AJAX requests.
+
+  Three tools we can use are .fetch(), .then(), .catch()
 
 
 ## Project Set Up
