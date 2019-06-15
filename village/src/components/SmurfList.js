@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-
 import Smurf from './Smurf';
+import styled from 'styled-components';
 
-class Smurfs extends Component {
+const H1 = styled.h1 `
+  color: #fd6280;
+  text-decoration: underline;
+  font-family: 'Staatliches', cursive;
+`;
+
+
+class SmurfList extends Component {
   render() {
     return (
       <div className="Smurfs">
-        <h1>Smurf Village</h1>
+        <H1>Smurf Village</H1>
         <ul>
-          {this.props.smurfs.map(smurf => {
+          {this.props.smurfData.map(smurf => {
             return (
               <Smurf
                 name={smurf.name}
@@ -29,4 +36,4 @@ Smurf.defaultProps = {
  smurfs: [],
 };
 
-export default Smurfs;
+export default SmurfList;

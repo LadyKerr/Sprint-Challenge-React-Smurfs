@@ -1,4 +1,33 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const H2 = styled.h2 `
+ color: #fd6280;
+ text-decoration: underline;
+ font-family: 'Staatliches', cursive;
+`;
+
+const Form = styled.form `
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+`;
+
+const Input = styled.input `
+  line-height: 35px;
+  font-family: 'Staatliches', cursive;
+`;
+
+const Button = styled.button `
+  margin: 24px;
+  padding: 10px;
+  color: #fd6280;
+  background-color: #62cdfd;
+  border-radius: 15px;
+  font-size: 25px;
+  font-family: 'Staatliches', cursive;
+`;
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -10,10 +39,9 @@ class SmurfForm extends Component {
     };
   }
 
-  addSmurf = event => {
+  addSmurf = (event) => {
     event.preventDefault();
-    // add code to create the smurf using the api
-
+    this.props.addSmurf(this.state)
     this.setState({
       name: '',
       age: '',
@@ -28,27 +56,28 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
+        <H2>Know a Smurf? Add a Smurf!</H2>
+        <Form onSubmit={this.addSmurf}>
+          <Input
             onChange={this.handleInputChange}
             placeholder="name"
             value={this.state.name}
             name="name"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="age"
             value={this.state.age}
             name="age"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="height"
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
-        </form>
+          <Button type="submit">Add to the village</Button>
+        </Form>
       </div>
     );
   }

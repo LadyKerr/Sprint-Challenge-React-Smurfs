@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+.nav-links {
+  display: flex;
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Staatliches', cursive;
+  color: #62cdfd;
+  background-color: yellow;
+}
