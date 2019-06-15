@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import Smurf from './Smurf';
 
-class Smurfs extends Component {
+class SmurfList extends Component {
   render() {
     return (
       <div className="Smurfs">
         <h1>Smurf Village</h1>
         <ul>
-          {this.props.smurfs.map(smurf => {
+          {this.props.smurfData.map(smurf => {
             return (
               <Smurf
                 name={smurf.name}
@@ -29,4 +29,4 @@ Smurf.defaultProps = {
  smurfs: [],
 };
 
-export default Smurfs;
+export default SmurfList;
